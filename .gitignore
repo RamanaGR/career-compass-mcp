@@ -1,0 +1,30 @@
+# Browser persistent session profile (never commit local cookies/session state)
+.compass_browser_profile/
+
+# Local environment overrides and private documents
+.env
+.env.*
+!.env.example
+assets/*.pdf
+assets/*.doc
+assets/*.docx
+!assets/.gitkeep
+
+# Python build & virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# OS & Editor metadata
+.DS_Store
+.idea/
+.vscode/

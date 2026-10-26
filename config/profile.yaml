@@ -1,0 +1,111 @@
+personal:
+  first_name: "Ramana"
+  last_name: "Gangarao"
+  full_name: "Ramana Gangarao"
+  email: "gangaraoramana0404@gmail.com"
+  phone: "8555021702" # Leave empty string if not set; flag Amber if required on form
+  location: "Bangalore, Karnataka, India"
+  city: "Bangalore"
+  state: "Karnataka"
+  country: "India"
+
+links:
+  linkedin: "https://www.linkedin.com/in/ramana-gangarao"
+  github: "https://github.com/RamanaGR"
+  portfolio: "https://ramanagr.github.io/"
+  website: ""
+
+documents:
+  resume_path: "assets/Ramana_Gangarao_CV.pdf"
+  cover_letter_path: "assets/cover_letter.pdf"
+
+work_authorization:
+  current_location: "Bangalore, India"
+  authorized_india: true
+  authorized_eu: true
+  authorized_us: false
+  requires_eu_visa_sponsorship: false
+  requires_us_visa_sponsorship: true
+  willing_to_relocate_eu_germany: true
+
+preferences:
+  target_roles:
+    - "Senior AI Engineer"
+    - "Lead AI & Software Engineer"
+    - "Senior Software Engineer - AI/ML"
+    - "LLM / Agentic Systems Engineer"
+  remote_preference: "Hybrid or Onsite or Remote"
+  relocation: "Yes, open to relocating to Germany and across the European Union"
+  notice_period: "30 days"        # Leave empty so tool asks me once and caches my exact answer
+  availability_date: ""    # Leave empty so tool asks me once and caches my exact answer
+  salary_expectations: "85000"  # Leave empty so tool asks me once and caches my exact answer
+
+education:
+  - degree: "Master of Science in Information Technology"
+    institution: "Atlantis University"
+    location: "Miami, Florida, USA"
+    graduation_date: "2025-10"
+  - degree: "Bachelor of Technology in Electronics and Instrumentation Engineering"
+    institution: "Keshav Memorial Institute of Technology (JNTUH)"
+    location: "Hyderabad, India"
+    graduation_date: "2016-04"
+
+certifications:
+  - "AWS Certified Cloud Practitioner (2023)"
+
+languages:
+  - language: "English"
+    proficiency: "Fluent / Professional Working Proficiency"
+  - language: "Telugu"
+    proficiency: "Native"
+  - language: "German"
+    proficiency: "Basic / Beginner (A1 - currently learning)"
+
+experience:
+  years_of_experience: 8
+  current_title: "Lead AI & Software Engineer (Lead - Technology)"
+  current_company: "Synechron Technologies Pvt. Ltd. (Client: Wells Fargo)"
+  summary: >
+    Lead AI & Software Engineer specializing in production multi-agent systems, enterprise RAG architectures,
+    LLM governance and evaluation pipelines, and scalable backend microservices using Python, FastAPI, Java,
+    Kafka, and cloud infrastructure.
+  core_skills:
+    - "Python"
+    - "Java"
+    - "FastAPI"
+    - "Spring Boot"
+    - "Multi-Agent Systems (Google ADK, LangGraph, CrewAI, MCP, A2A)"
+    - "RAG Architectures & Vector Databases (Milvus, Chroma)"
+    - "LLM Evaluation & Governance (LLM-as-a-Judge, Ragas, LangSmith)"
+    - "PII/PHI Protection (Microsoft Presidio)"
+    - "Apache Kafka"
+    - "SQLAlchemy 2.0 & PostgreSQL (asyncpg)"
+    - "AWS (Bedrock, EC2, S3)"
+    - "Docker, Kubernetes & MLOps"
+    - "Ollama & Local Open-Source LLMs"
+  highlights:
+    - role: "Lead AI & Software Engineer"
+      company: "Synechron Technologies Pvt. Ltd. (Client: Wells Fargo)"
+      location: "Bangalore, India"
+      period: "2026-07 to Present"
+      details: "Building an enterprise AI governance and evaluation platform for financial LLM agents using FastAPI microservices, Kafka pipelines, and LLM-as-a-Judge frameworks."
+    - role: "AI Engineer"
+      company: "Innovapath INC (Client: Optum)"
+      location: "San Francisco, CA"
+      period: "2026"
+      details: "Designed and deployed a 9-agent Google ADK contract understanding pipeline with strict PHI/PII compliance."
+    - role: "Graduate Research Assistant - AI & Systems"
+      company: "Atlantis University"
+      location: "Miami, FL"
+      period: "2024 to 2025"
+      details: "Built and launched Phase 1 RAG recruitment assistant and Phase 2 multi-agent workflows for the TalentScreen platform."
+    - role: "Software Developer & MLOps Engineer"
+      company: "Wipro Limited"
+      location: "Chennai, India"
+      period: "Prior"
+      details: "Developed backend software services and MLOps deployment pipelines."
+    - role: "Software Engineer"
+      company: "INNOVAPATH IT Solutions PVT Ltd."
+      location: "Hyderabad, India"
+      period: "Prior"
+      details: "Engineered enterprise software applications and backend data workflows."
