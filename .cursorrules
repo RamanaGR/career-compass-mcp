@@ -1,0 +1,36 @@
+# Career Compass MCP — Engineering & Safety Rules
+
+## 1. Stdio Transport Integrity
+- NEVER use `print()` anywhere under `src/compass_mcp/`.
+- Route all logs strictly to `sys.stderr` via `logging.StreamHandler(sys.stderr)` so MCP JSON-RPC frames over `stdout` are never corrupted.
+
+## 2. Strict Human-in-the-Loop (HITL) Submission Control
+- NEVER call `.click()`, `.press("Enter")`, or `form.submit()` on any `input[type="submit"]`, `button[type="submit"]`, or final application submit button.
+- The assistant only stages values, attaches local PDF documents, applies visual inline CSS outlines, and scrolls to the bottom review area while keeping the browser open.
+
+## 3. Strict Zero-Hallucination & Closed-World Grounding (`src/compass_mcp/llm/assistant.py`)
+- Treat `config/profile.yaml` and `config/qa_cache.json` as the single closed-world source of truth.
+- NEVER assume, extrapolate, or invent facts. If a form control asks about a skill, tool, domain, certification, security clearance, language level, phone number, notice period, availability date, salary expectation, or demographic attribute NOT explicitly documented in `profile.yaml` or `qa_cache.json`:
+  1. Do NOT guess or assume "Yes".
+  2. Set `confidence: 0.0`, `value: ""`, and `reasoning: "Fact not explicitly present in profile.yaml — flagged for manual user input"`.
+  3. Leave the control blank and highlight it in **Amber** (`#d97706`) for manual user input.
+- When generating open-ended textarea responses (Mode 2), ONLY mention projects, companies, metrics, and technologies explicitly listed in `profile.yaml`.
+
+## 4. Natural Interaction Pacing & Persistent Context
+- Use `playwright.chromium.launch_persistent_context` with `user_data_dir=".compass_browser_profile"`, `headless=False`, `no_viewport=True`, and `args=["--disable-blink-features=AutomationControlled"]`.
+- Always route form interactions through `PacingController` (`src/compass_mcp/browser/pacing.py`):
+  - Use `paced_fill` (smooth scroll -> focus pause -> sequential character typing 35-85ms with punctuation pauses -> inter-field delay 0.8-1.8s).
+  - Enforce the minimum session floor (`CAREER_COMPASS_MIN_SESSION_SECONDS=25`, randomized 22.0s–32.0s window) before completing Stage 4.
+
+## 5. Non-Intrusive Visual Highlighting
+- Never inject foreign floating HTML banners into the page DOM (avoids React hydration errors and strict CSP blocks).
+- Apply visual review status strictly on existing form controls using inline CSS (`element.style.outline = "2px solid <hex>"`, `element.style.outlineOffset = "2px"`) and the native `title` attribute:
+  - Blue (`#2563eb`): Standard profile data from `config/profile.yaml`
+  - Green (`#16a34a`): High-confidence (`>= 0.75`) cached or local Ollama suggestion
+  - Amber (`#d97706`): Low-confidence (`< 0.75`), missing profile fact, or sensitive consent control left blank for manual input
+
+## 6. Natural Engineer Writing Style (Mode 2 Textareas)
+- Keep open-ended textarea responses concise: 2 to 4 sentences (40–75 words max).
+- Lead directly with concrete technical experience from `profile.yaml`.
+- Never use banned cliches: `delve`, `testament`, `tapestry`, `passionate`, `thrilled`, `excited`, `dynamic`, `leverage`, `spearhead`, `synergy`, `cutting-edge`, `seamlessly`, `pivotal`, `honing`, `eager`, `align`, `foster`, `realm`, `embark`, `unwavering`, `moreover`, `furthermore`.
+- Never use em-dashes (`—`), semicolons (`;`), or bulleted lists inside textareas.

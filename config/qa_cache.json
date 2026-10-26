@@ -1,0 +1,86 @@
+{
+  "version": "1.0",
+  "entries": {
+    "do you currently have the legal right to work in poland e g citizenship permanent residency or a valid work permit": {
+      "prompt": "Do you currently have the legal right to work in Poland (e.g. citizenship, permanent residency, or a valid work permit)?",
+      "normalized_key": "do you currently have the legal right to work in poland e g citizenship permanent residency or a valid work permit",
+      "value": "Yes",
+      "control_type": "select",
+      "confidence": 1.0,
+      "source": "user_update",
+      "updated_at": "2026-10-21T16:59:45Z"
+    },
+    "github username": {
+      "prompt": "GitHub Username",
+      "normalized_key": "github username",
+      "value": "RamanaGR",
+      "control_type": "text",
+      "confidence": 1.0,
+      "source": "ollama_mode1",
+      "updated_at": "2026-10-21T17:01:47Z"
+    },
+    "legal first name": {
+      "prompt": "Legal First Name",
+      "normalized_key": "legal first name",
+      "value": "Ramana",
+      "control_type": "text",
+      "confidence": 1.0,
+      "source": "user_update",
+      "updated_at": "2026-10-21T17:02:23Z"
+    },
+    "legal last name": {
+      "prompt": "Legal Last Name",
+      "normalized_key": "legal last name",
+      "value": "Gangarao",
+      "control_type": "text",
+      "confidence": 1.0,
+      "source": "user_update",
+      "updated_at": "2026-10-21T17:02:26Z"
+    },
+    "linkedin profile": {
+      "prompt": "LinkedIn Profile",
+      "normalized_key": "linkedin profile",
+      "value": "https://www.linkedin.com/in/ramana-gangarao",
+      "control_type": "text",
+      "confidence": 1.0,
+      "source": "user_update",
+      "updated_at": "2026-10-21T16:59:40Z"
+    },
+    "location": {
+      "prompt": "Location",
+      "normalized_key": "location",
+      "value": "Bangalore, Karnataka, India",
+      "control_type": "combobox",
+      "confidence": 1.0,
+      "source": "user_update",
+      "updated_at": "2026-10-21T17:02:32Z"
+    },
+    "what are your salary expectations": {
+      "prompt": "What are your salary expectations?",
+      "normalized_key": "what are your salary expectations",
+      "value": "85000",
+      "control_type": "text",
+      "confidence": 1.0,
+      "source": "ollama_mode1",
+      "updated_at": "2026-10-21T16:58:54Z"
+    },
+    "when is your earliest availability": {
+      "prompt": "When is your earliest availability?",
+      "normalized_key": "when is your earliest availability",
+      "value": "30 days",
+      "control_type": "text",
+      "confidence": 1.0,
+      "source": "user_update",
+      "updated_at": "2026-10-21T16:59:43Z"
+    },
+    "where do you currently live": {
+      "prompt": "Where do you currently live?",
+      "normalized_key": "where do you currently live",
+      "value": "India",
+      "control_type": "select",
+      "confidence": 1.0,
+      "source": "ollama_mode1",
+      "updated_at": "2026-10-21T16:59:08Z"
+    }
+  }
+}
